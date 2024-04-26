@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:black;
+}
+.box{
+    position: relative;
+    width: 450px;
+    height: 550px;
+    border-radius: 30px;
+    background: #ede8edfc;
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
+    10px 10px 70px rgba(0,0,0,0.25),
+    inset 5px 5px 10px rgba(0,0,0,0.25),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75) ;
+}
+h2{
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+     color: #000000;
+    font-size: 1.60em;
+    margin-bottom: 10px;
+}
+#inputBox{
+    position: relative;
+    height: 10%;
+    width: 98%;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    background: #bdcbda;
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.25),
+    inset 2px 2px 5px rgba(0,0,0,0.5), 
+    inset -3px -3px 5px rgba(0,0,0,0.5);
+}
+.box li{
+    position: relative;
+    width: calc(100% - 40px);
+    display: flex;
+    align-items: center;
+    background: #f3c06899;
+    margin: 15px 0;
+    padding: 10px 10px 10px 45px;
+    min-height: 45px;
+    cursor: pointer;
+    border-radius: 22.5px;
+    color: #000000;
+    box-shadow:5px 5px 7px rgba(0,0,0,0.25),
+    inset 2px 2px 5px rgba(0,0,0,0.5), 
+    inset -3px -3px 5px rgba(0,0,0,0.5) ;
+}
+.box li i{
+    position: absolute;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eab3a090;
+    border-radius: 70%;
+    box-shadow:5px 5px 7px rgba(0,0,0,0.25),
+    inset 2px 2px 5px rgba(255,255,255,0.25), 
+    inset -3px -3px 5px rgba(0,0,0,0.5) ;
+    
+}
+.box li i:hover{
+    background: red;
+    border-radius: 70%;
+}
+.box li i::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: #000000;
+    transform: rotate(45deg);
+}
+.box li i::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background: #000000;
+    transform: rotate(-45deg);
+}
+.box li::before{
+    content: '';
+    position: absolute;
+    left: 8px;
+    width: 30px;
+    height: 30px;
+    background: #aaa7aa;
+    border-radius: 50%;
+}
+.box li.done{
+    background: #ed97d08b;
+    color: black;
+}
+.box li.done:after{
+    content: '';
+    position: absolute;
+    left: 15px;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    transform: rotate(315deg);
+}
